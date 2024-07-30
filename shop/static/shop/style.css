@@ -1,0 +1,51 @@
+body {
+    position: relative;
+    margin: 0; /* Remove default margin */
+}
+
+.bg-image {
+    content: "";
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.harrisonbands.org/wp-content/uploads/2022/10/20221021_212840.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Ensures background stays fixed on scroll */
+    z-index: -1; /* Place behind other content */
+    filter: brightness(25%) blur(5px);
+}
+.card {
+    /* background-color: black; */
+    backdrop-filter: blur(85px);
+    width: 400px;
+    height: 800px;
+    border-radius: 15px;
+    margin: 150px auto;
+    position: relative;
+    display: block; 
+}
+.product {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+img {
+    overflow: hidden;
+    border-radius: 15px;
+}
+.head
+{
+    color:white;
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 0%;
+    overflow: hidden;
+
+}
+
+
