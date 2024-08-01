@@ -34,9 +34,13 @@
                     </label>
                 </nav>
             </div>
-          <h3>{{product.price}}$</h3>
-
+            <h3>{{product.price}}$</h3>
+            <button id="product.id" class="extend circle medium-elevate fill jss">
+                <i>add</i>
+                <span>Add to Chart</span>
+            </button>
+            
+        </div>
     </div>
-</div>
-{% endfor %}
-{% endblock body %}
+    {% endfor %}
+    {% endblock body %}

@@ -48,4 +48,12 @@ img {
 
 }
 
-
+.cart-popup {
+    display: none;
+    margin: auto;
+    width: 400px;
+    height: 800px;
+    border-radius: 15px;
+    margin: 150px auto;
+    z-index: 9;
+}
