@@ -1,9 +1,13 @@
 {% extends "shop/base.html" %}
 {% block body %}
 <div class="bg-image"></div>
+<button onclick="window.location.href='{% url "orders" %}'">
+    <i class="fas fa-shopping-cart"></i>
+    <div id="cart" class="badge top left">0</div>
+</button>
 {% for product in products %}
 <div class="card">
-    <div class="product">
+    <div id="productId" class="product">
         <img src="{{product.image}}" alt="Seniors T-shirt">
           <h1 class="head">{{product.title}}</h1>
           <div class="field middle-align">
@@ -21,18 +25,6 @@
                       <span style="color: white;">Small</span>
                     </label>
                 </nav>            
-            </div>
-            <div class="field middle-align">
-                <nav >
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span style="color: white;" >Black</span>
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        <span style="color: white;" >White</span>
-                    </label>
-                </nav>
             </div>
             <h3>{{product.price}}$</h3>
             <button id="product.id" class="extend circle medium-elevate fill jss">
