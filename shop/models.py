@@ -19,3 +19,11 @@ class Product(models.Model):
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES, default="M")
     price = models.FloatField(blank=True, null=True)
     discount_price = models.FloatField(blank=True, null=True)
+
+class Orders(models.Model) :
+    items = models.CharField(max_length=1000)
+    name = models.CharField(max_length=1000)
+    phone = models.CharField(max_length=1000)
+    email = models.EmailField()
+    address = models.CharField(max_length=1000)
+    notes = models.TextField()  

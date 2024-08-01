@@ -1,4 +1,33 @@
 {% extends "shop/base.html" %}
 {% block body %}
-<h1 id="test">this is order template</h1>
+<ul id="list">
+</ul>
+
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" id="items" name="items" value="some-item-value">
+  <legend>Fill for order</legend>
+  <div class="field border label">
+      <input id="name" name="name" class="name">
+      <label>Full Name</label>
+  </div>   
+  <div class="field border label">
+      <input id="phone" name="phone" class="phone">
+      <label>Phone Number</label>
+  </div>  
+  <div class="field border label">
+      <input id="email" name="email" class="email">
+      <label>Email Address</label>
+  </div>  
+  <div class="field border label">
+      <input id="address" name="address" class="address">
+      <label>Address</label>
+  </div>
+  <div class="field border label textarea">
+      <textarea id="notes" name="notes" class="notes"></textarea>
+      <label>Any notes(optional)</label>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
 {% endblock body %}
